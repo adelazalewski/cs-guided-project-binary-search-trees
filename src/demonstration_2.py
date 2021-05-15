@@ -42,6 +42,8 @@ def is_valid_BST(root):
     # Your code here
     if root is None:
         return False
+    if root.left is None and root.right is None:
+        return False
     
     if root.left.value < root.value:
         is_valid_BST(root.left)
